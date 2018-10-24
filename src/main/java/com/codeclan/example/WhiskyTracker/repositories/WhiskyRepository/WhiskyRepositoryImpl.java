@@ -18,21 +18,4 @@ public class WhiskyRepositoryImpl implements WhiskyRepositoryCustom {
     @Autowired
     EntityManager entityManager;
 
-    @Transactional
-    public List<Distillery> getDistilleriesWithParticularWhiskyAge(int age){
-        List<Distillery> results = null;
-        Session session = entityManager.unwrap(Session.class);
-
-        try {
-            Criteria cr = session.createCriteria(Whisky.class);
-            cr.add(Restrictions.eq("age", age));
-
-            results = cr.list();
-        } catch(HibernateException ex) {
-            ex.printStackTrace();
-        } finally {
-            session.close();
-        }
-        return results;
-    }
 }
