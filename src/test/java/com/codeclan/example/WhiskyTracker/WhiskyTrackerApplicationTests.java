@@ -37,8 +37,23 @@ public class WhiskyTrackerApplicationTests {
 	}
 
 	@Test
+	public void canGetWhiskysOfParticularAgeFromDistillery2(){
+		List<Whisky> results = whiskyRepository.getWhiskysOfParticularAgeFromDistillery("Glendronach", 12);
+	}
+
+	@Test
 	public void canGetDistilleriesWithParticularRegion(){
 		List<Distillery> results = distilleryRepository.getDistilleryWithParticularRegion("Speyside");
+	}
+
+	@Test
+	public void canGetWhiskiesFromParticularRegion() {
+		List<Whisky> results = whiskyRepository.getWhiskiesFromRegion("Highland");
+	}
+
+	@Test
+	public void canGetWhiskiesOfParticularAge() {
+		List<Whisky> results = whiskyRepository.getWhiskiesOfParticularAge(15);
 	}
 
 }

@@ -14,11 +14,6 @@ import java.util.List;
 
 public class DistilleryRepositoryImpl implements DistilleryRepositoryCustom {
 
-    //TODO: create a method to find all whiskeys of a particular year
-    //TODO: create a method to find all whiskeys of a particular region
-    //TODO: create a method to find all distilleries of a particular region
-    //TODO: create a method to find all whiskeys of a particular distillery with a specific age
-
     @Autowired
     EntityManager entityManager;
 
