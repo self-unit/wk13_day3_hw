@@ -53,7 +53,7 @@ public class WhiskyTrackerApplicationTests {
 
 	@Test
 	public void canGetWhiskiesOfParticularAge() {
-		List<Whisky> results = whiskyRepository.getWhiskiesOfParticularAge(15);
+		List<Whisky> results = whiskyRepository.getWhiskiesOfParticularYear(1991);
 	}
 
 }
